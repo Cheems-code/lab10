@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Lab10Theme {
-                MainScreen() // Llamada a la función composable que organiza las pantallas
+                MainScreen()
             }
         }
     }
