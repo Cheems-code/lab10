@@ -1,27 +1,43 @@
 package com.example.lab10
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.lab10.ui.theme.Lab10Theme
 import com.example.lab10.view.SeriesApp
+import com.example.lab10.view.ScreenInicio
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             Lab10Theme {
-                SeriesApp()
+                MainScreen() // Llamada a la función composable que organiza las pantallas
             }
         }
+    }
+}
+
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+@Composable
+fun MainScreen() {
+    Scaffold(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        SeriesApp()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview() {
+    Lab10Theme {
+        MainScreen()
     }
 }
