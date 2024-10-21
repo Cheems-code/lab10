@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.lab10.ui.theme.Lab10Theme
-import com.example.lab10.view.SeriesApp
-import com.example.lab10.view.ScreenInicio
+import com.example.lab10.view.PostsApp
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +30,7 @@ fun MainScreen() {
     Scaffold(
         modifier = Modifier.fillMaxSize()
     ) {
-        SeriesApp()
+        PostsApp()
     }
 }
 
